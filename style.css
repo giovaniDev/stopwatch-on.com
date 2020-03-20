@@ -1,0 +1,17 @@
+#header-content, #footer-content {
+    height: 100px;
+    width: 100%;
+    background-color: darkslategray;
+    flex-grow: 1;
+}
+
+#chronometer-content {
+    height: auto;
+}
+
+body #main-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
