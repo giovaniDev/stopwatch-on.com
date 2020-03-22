@@ -3,3 +3,18 @@
     padding: 0px;
 }
 
+#header-content, #footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+#stopwatch-content {
+    height: 50%;
+    border: solid 1px;
+    margin: 20px;
+    padding: 20px;
+    border-color: darkslategray;
+}
+
