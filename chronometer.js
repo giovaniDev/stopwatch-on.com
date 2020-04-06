@@ -39,7 +39,7 @@
                     document.querySelector('#run').innerHTML = 'Run'
                     clearInterval(interval)
                 }
-            }, 0.3);
+            }, 10);
         }
 
         function setActive() {
