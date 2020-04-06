@@ -1,5 +1,4 @@
-User-agent: Mediapartners-Google
-Disallow:
-
 User-agent: *
-Disallow: /*.swf$
+Allow: /
+
+Sitemap: https://stopwatch-on.com/sitemap_index.xml
