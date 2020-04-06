@@ -59,7 +59,17 @@
     <main id="stopwatch-content" >
         
         <h1>Use the stopwatch</h1>
-        <p id="stopwatch">00:00:00</p>
+        <div id="stopwatch" >
+            <table >
+                <tr>
+                    <td id="minute">00</td>
+                    <td id="separator" >:</td>
+                    <td id="second">00</td>
+                    <td id="separator">:</td>
+                    <td id="centesimal">00</td>
+                </tr>
+            </table>
+        </div>
             
         <button id="run" onclick="setActive()" type="submit">Run</button>
         <button id="reset" onclick="reset()" type="submit">Reset</button>

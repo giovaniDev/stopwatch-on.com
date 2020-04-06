@@ -1,26 +1,45 @@
         let centesimal = 0
+        let centesimalStr = '00'
         let second = 0
+        let secondStr = '00'
         let minute = 0
+        let minuteStr = '00'
         let isActive = false
         
         function run() {
 
             const interval = setInterval(() => {
-                document.querySelector('#stopwatch').innerHTML = `${minute}: ${second}: ${centesimal}`
-                centesimal += 1
+                document.querySelector('#minute').innerHTML = minuteStr
+                document.querySelector('#second').innerHTML = secondStr
+                document.querySelector('#centesimal').innerHTML = centesimalStr
+                if (centesimal < 9) {
+                    centesimalStr = "0" + (centesimal += 1)
+                } else {
+                    centesimalStr = centesimal += 1
+                }
                 if (centesimal === 100) {
-                    second += 1
+                    if (second < 9) {
+                        secondStr = "0" + (second += 1)
+                    } else {
+                        secondStr = second += 1
+                    }
+                    centesimalStr = '00'
                     centesimal = 0
                 }
-                if (second === 10) {        
-                    minute += 1
-                    second = 0 
+                if (second === 60) {        
+                    if (minute < 9) {
+                        minuteStr = "0" + (minute += 1)
+                    } else {
+                        minuteStr = minute += 1
+                    }
+                    secondStr = '00'
+                    second = 0
                 }
                 if (isActive === false) {
                     document.querySelector('#run').innerHTML = 'Run'
                     clearInterval(interval)
                 }
-            }, 10);
+            }, 0.3);
         }
 
         function setActive() {
@@ -34,7 +53,12 @@
 
         function reset() {
             centesimal = 0
+            centesimalStr = '00'
             second = 0
+            secondStr = '00'
             minute = 0
-            document.querySelector('#stopwatch').innerHTML = `${minute}: ${second}: ${centesimal}`
+            minuteStr = '00'
+            document.querySelector('#minute').innerHTML = minuteStr
+            document.querySelector('#second').innerHTML = secondStr
+            document.querySelector('#centesimal').innerHTML = centesimalStr
         }
